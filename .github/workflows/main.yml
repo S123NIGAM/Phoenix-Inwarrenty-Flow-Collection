@@ -42,7 +42,7 @@ jobs:
 
       - name: Creating the github pages
         if: always()
-        uses: peaceiris/actions-github-pages@v4.0.0
+        uses: peaceiris/actions-github-pages@v3.1.12
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: newman/
