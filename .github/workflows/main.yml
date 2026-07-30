@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js environment(Install node js and npm)
         uses: actions/setup-node@v7.0.0
         with:
-          node version: '22'
+          node-version: '22'
 
       - name: Install newman and html-extra libraries
         run: | 
@@ -42,7 +42,7 @@ jobs:
 
       - name: Creating the github pages
         if: always()
-        uses: peaceiris/actions-github-pages@v3.1.12
+        uses: peaceiris/actions-github-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: newman/
